@@ -26,6 +26,9 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: build release
         run: ./gradlew assembleRelease
 
