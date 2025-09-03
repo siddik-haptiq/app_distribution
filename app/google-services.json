@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "99189728605",
+    "project_id": "app-distribution-c2098",
+    "storage_bucket": "app-distribution-c2098.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99189728605:android:3b9334838c82cfacfbf4b4",
+        "android_client_info": {
+          "package_name": "com.example.firebaseappdistribution"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3-mQS1NeBn-hUdUgGhrp0e-Hyh6hBG-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
