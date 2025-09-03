@@ -34,17 +34,10 @@ jobs:
       - name: Execute Gradle command - assembleRelease
         run: ./gradlew assembleRelease
 
-      - name: Rename APK with date
-        id: rename_apk
-        run: |
-          DATE=$(date +%Y%m%d)
-          mv app/build/outputs/apk/release/app-release.apk app/build/outputs/apk/release/DRF_Release_$DATE.apk
-          echo "date=$DATE" >> $GITHUB_OUTPUT
-
       - name: Upload Artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_CREDENTIALS }}
           groups: 'testers'
-          file: app/build/outputs/apk/release/DRF_Release_${{ steps.rename_apk.outputs.date }}.apk
+          file: app/build/outputs/apk/release/app_release.apk
