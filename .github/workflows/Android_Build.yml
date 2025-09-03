@@ -19,7 +19,7 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Execute Gradle command - assembleRelease
+      - name: Build with Gradle
         run: ./gradlew assembleRelease
 
       - name: Upload Artifact to Firebase App Distribution
