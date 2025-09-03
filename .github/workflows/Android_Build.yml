@@ -1,9 +1,9 @@
 name: Android Release Build Deploy To Firebase App Distribution
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ master ]
+  push:
+    branches: [ master ]
 
 jobs:
   build:
