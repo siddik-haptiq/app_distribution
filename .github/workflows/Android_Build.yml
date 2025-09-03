@@ -30,7 +30,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Decode Keystore
-        run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > release.jks
+        run: echo "${{ secrets.RELEASE_KEYSTORE }}" | base64 --decode > Test.jks
 
       - name: Build signed release
         env:
