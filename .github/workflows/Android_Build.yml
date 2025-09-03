@@ -29,8 +29,11 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      - name: build release
-        run: ./gradlew assembleRelease
+      - name: Build signed release
+        run: ./gradlew assembleRelease -Pandroid.injected.signing.store.file=release.keystore \
+          -Pandroid.injected.signing.store.password=${{ secrets.RELEASE_KEYSTORE_PASSWORD }} \
+          -Pandroid.injected.signing.key.alias=${{ secrets.RELEASE_KEY_ALIAS }} \
+          -Pandroid.injected.signing.key.password=${{ secrets.RELEASE_KEY_PASSWORD }}
 
       - name: upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
