@@ -31,7 +31,7 @@ jobs:
 
       - name: build with gradle
         run: ./gradlew build
-        
+
       - name: Build signed release
         run: ./gradlew assembleRelease
 
